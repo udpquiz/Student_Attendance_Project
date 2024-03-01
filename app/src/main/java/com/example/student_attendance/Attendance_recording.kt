@@ -19,8 +19,8 @@ class Attendance_recording : AppCompatActivity() {
         setContentView(R.layout.activity_attendance_recording)
         val studentattendance = findViewById<Button>(R.id.submitattendance)
         val studentRecyclerView: RecyclerView = findViewById(R.id.studentRecyclerView)
-        val b = intent.extras
-        val a = b?.getString("file")
+        val c = intent.extras
+        val a = c?.getString("file")
         val inputStream = assets.open(a.toString()+".csv")
         val reader = CSVReader(InputStreamReader(inputStream))
         val studentList = ArrayList<Student>()

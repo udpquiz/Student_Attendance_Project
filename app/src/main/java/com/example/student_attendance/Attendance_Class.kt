@@ -10,11 +10,11 @@ class Attendance_Class : AppCompatActivity() {
         setContentView(R.layout.activity_attendance_class)
         val icaa6 = findViewById<EditText>(R.id.ICAA6)
         val open = findViewById<Button>(R.id.open)
-        val b = Bundle()
+        val c = Bundle()
         open.setOnClickListener {
-            b.putString("file",icaa6.text.toString())
+            c.putString("file",icaa6.text.toString())
             val intent = Intent(this,Attendance_recording::class.java)
-            intent.putExtras(b)
+            intent.putExtras(c)
             startActivity(intent)
         }
     }
